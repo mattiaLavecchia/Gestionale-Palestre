@@ -1,0 +1,165 @@
+{
+  "customers": [
+    {
+      "id": "100",
+      "name": "Joseph",
+      "surname": "Alfonsus",
+      "birth": "2018-11-11T00:00:00.000Z",
+      "gender": "male",
+      "subscription": 1,
+      "weeklyWorkouts": 3,
+      "accesses": 12,
+      "subscriptionExpires": "10/12/18",
+      "status": "in scadenza"
+    },
+    {
+      "subscriptionExpires": "2024-01-16T19:28:57.528Z",
+      "accesses": 12,
+      "status": "in corso",
+      "id": "11478",
+      "name": "gion",
+      "surname": "lenon",
+      "birth": "2023-12-05T23:00:00.000Z",
+      "gender": "male",
+      "subscription": 1,
+      "weeklyWorkouts": 3
+    },
+    {
+      "subscriptionExpires": "2024-01-16T19:32:55.778Z",
+      "accesses": 12,
+      "status": "in corso",
+      "id": "28417",
+      "name": "prova",
+      "surname": "aaa",
+      "birth": "2023-12-24T23:00:00.000Z",
+      "gender": "male",
+      "subscription": 1,
+      "weeklyWorkouts": 3
+    },
+    {
+      "subscriptionExpires": "2024-01-16T19:28:57.528Z",
+      "accesses": 12,
+      "status": "in corso",
+      "id": "114783",
+      "name": "gion",
+      "surname": "lenon",
+      "birth": "2023-12-05T23:00:00.000Z",
+      "gender": "male",
+      "subscription": 1,
+      "weeklyWorkouts": 3
+    },
+    {
+      "subscriptionExpires": "2024-01-16T19:28:57.528Z",
+      "accesses": 12,
+      "status": "in corso",
+      "id": "114784",
+      "name": "gion",
+      "surname": "lenon",
+      "birth": "2023-12-05T23:00:00.000Z",
+      "gender": "male",
+      "subscription": 1,
+      "weeklyWorkouts": 3
+    },
+    {
+      "subscriptionExpires": "2024-01-16T19:28:57.528Z",
+      "accesses": 12,
+      "status": "in corso",
+      "id": "1147228",
+      "name": "gion",
+      "surname": "lenon",
+      "birth": "2023-12-05T23:00:00.000Z",
+      "gender": "male",
+      "subscription": 1,
+      "weeklyWorkouts": 3
+    },
+    {
+      "subscriptionExpires": "2024-01-16T19:28:57.528Z",
+      "accesses": 12,
+      "status": "in corso",
+      "id": "1141178",
+      "name": "gion",
+      "surname": "lenon",
+      "birth": "2023-12-05T23:00:00.000Z",
+      "gender": "male",
+      "subscription": 1,
+      "weeklyWorkouts": 3
+    }
+  ],
+  "accessList": [
+    {
+      "id": "1",
+      "idCustomer": "100",
+      "access": "12/11/18"
+    }
+  ],
+  "paymentList": [
+    {
+      "id": "1",
+      "idCustomer": "100",
+      "paymentDate": "6/12/18",
+      "price": 40
+    },
+    {
+      "id": "2",
+      "idCustomer": "100",
+      "paymentDate": "6/1/19",
+      "price": 40
+    },
+    {
+      "id": "3",
+      "idCustomer": "100",
+      "paymentDate": "6/2/19",
+      "price": 40
+    },
+    {
+      "id": "4",
+      "idCustomer": "100",
+      "paymentDate": "6/3/19",
+      "price": 40
+    },
+    {
+      "id": "5",
+      "idCustomer": "100",
+      "paymentDate": "6/4/19",
+      "price": 40
+    }
+  ],
+  "subscriptionsDetails": [
+    {
+      "id": "1",
+      "subscriptionDuration": 1,
+      "weeklyWorkouts": 2,
+      "price": 30
+    },
+    {
+      "id": "2",
+      "subscriptionDuration": 1,
+      "weeklyWorkouts": 3,
+      "price": 40
+    },
+    {
+      "id": "3",
+      "subscriptionDuration": 3,
+      "weeklyWorkouts": 3,
+      "price": 100
+    },
+    {
+      "id": "4",
+      "subscriptionDuration": 3,
+      "weeklyWorkouts": 2,
+      "price": 50
+    },
+    {
+      "id": "5",
+      "subscriptionDuration": 1,
+      "weeklyWorkouts": 7,
+      "price": 60
+    },
+    {
+      "id": "6",
+      "subscriptionDuration": 3,
+      "weeklyWorkouts": 7,
+      "price": 150
+    }
+  ]
+}

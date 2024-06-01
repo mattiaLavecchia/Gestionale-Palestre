@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.home-css {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.container {
+    padding: 30px 40px;
+}
+
+
+.primary-title {
+    font-size: 48px !important;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold !important;
+}
+
+.custom-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+    width: 1%;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+// /* Stili per schermi di dimensioni medie (da 768px a 991px) */
+// @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+//     .custom-table th,
+//     .custom-table td {
+//         padding: 10px;
+//         font-size: 14px;
+//     }
+// }
+
+// /* Stili per schermi di dimensioni grandi (da 992px in su) */
+// @media only screen and (min-width: 992px) {
+
+//     .custom-table th,
+//     .custom-table td {
+//         padding: 12px;
+//         font-size: 16px;
+//     }
+// }
+
+// /* Stili per schermi extra larghi (da 1200px in su) */
+// @media only screen and (min-width: 1200px) {
+
+//     .custom-table th,
+//     .custom-table td {
+//         padding: 14px;
+//         font-size: 18px;
+//     }
+// }

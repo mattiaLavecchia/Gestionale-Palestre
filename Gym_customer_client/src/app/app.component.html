@@ -1,0 +1,56 @@
+<mat-drawer-container *ngIf="isAuthenticated">
+  <mat-drawer mode="over" #drawer>
+
+    <mat-nav-list role="listitem">
+      <!-- <a mat-list-item routerLink="/signUp" >
+        <mat-icon >face</mat-icon>
+        <span class="nav-caption">Signup</span>
+      </a> -->
+      <!-- <a mat-list-item routerLink="/amministrazione">
+        <mat-icon>face</mat-icon>
+        <span class="nav-caption">Amministrazione</span>
+      </a> -->
+
+      <a mat-list-item class="menu-item" routerLink="/">
+        <mat-icon>fitness_center</mat-icon>
+        <span class="nav-caption">Gestione Iscritti</span>
+      </a>
+
+      <a mat-list-item class="menu-item" routerLink="/list-access">
+        <mat-icon>eject</mat-icon>
+        <span class="nav-caption">Accessi Giornalieri</span>
+      </a>
+
+      <a mat-list-item class="menu-item" routerLink="/list-payment">
+        <mat-icon>eject</mat-icon>
+        <span class="nav-caption">Lista pagamenti</span>
+      </a>
+
+      <a mat-list-item class="menu-item" (click)="onLogout()">
+        <mat-icon>logout</mat-icon>
+        <span class="nav-caption">Logout</span>
+      </a>
+
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <mat-toolbar color="primary" class="toolbar">
+      <div class="menu">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <div class="info-text">
+          <img src="../assets/logo-color.png" class="image">
+          <span>Flex Hive</span>
+        </div>
+      </div>
+      <!-- <div class="badge">
+        <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+      </div> -->
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<app-login *ngIf="!isAuthenticated"></app-login>

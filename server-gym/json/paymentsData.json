@@ -1,0 +1,27 @@
+[
+    {
+        "idCustomer": "100",
+        "paymentDate": "6/12/18",
+        "price": 40
+    },
+    {
+        "idCustomer": "100",
+        "paymentDate": "6/1/19",
+        "price": 40
+    },
+    {
+        "idCustomer": "100",
+        "paymentDate": "6/2/19",
+        "price": 40
+    },
+    {
+        "idCustomer": "100",
+        "paymentDate": "6/3/19",
+        "price": 40
+    },
+    {
+        "idCustomer": "100",
+        "paymentDate": "6/4/19",
+        "price": 40
+    }
+]

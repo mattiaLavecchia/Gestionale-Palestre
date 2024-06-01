@@ -1,0 +1,96 @@
+mat-drawer-container {
+    height: 100%;
+}
+
+mat-drawer {
+    width: 350px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover,
+a:active {
+    color: blue;
+}
+
+.navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-caption {
+    padding-left: 8px;
+}
+
+.container {
+    padding: 30px 40px;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 36px;
+    color: #fff;
+    /* Cambia colore del testo a tuo piacimento */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #717171;
+    /* Cambia colore di sfondo al passaggio del mouse */
+}
+
+.menu-item mat-icon {
+    font-size: 24px;
+    /* Imposta la dimensione delle icone */
+    margin-right: 12px;
+    /* Aggiungi margine destro per spaziatura tra icona e testo */
+}
+
+.menu-item span {
+    font-size: 24px;
+    /* Imposta la dimensione del testo */
+}
+
+.info-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.image {
+    height: 40px;
+    /* Imposta l'altezza dell'immagine come desiderato */
+    width: auto;
+    /* Mantiene le proporzioni dell'immagine */
+    border-radius: 50%;
+}

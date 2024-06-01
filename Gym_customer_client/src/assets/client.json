@@ -1,0 +1,81 @@
+{
+    "customers": [
+        {
+            "id": "100",
+            "name": "Joseph",
+            "surname": "Alfonsus",
+            "birth": "2018-11-11T00:00:00.000Z",
+            "gender": "male",
+            "subscription": 1,
+            "weeklyWorkouts": 3,
+            "accesses": 12,
+            "subscriptionExpires": "10/12/18",
+            "status": "in scadenza"
+        }
+    ],
+    "accessList": [
+        {
+            "idCustomer": "100",
+            "access": "12/11/18"
+        }
+    ],
+    "paymentList": [
+        {
+            "idCustomer": "100",
+            "paymentDate": "6/12/18",
+            "price": 40
+        },
+        {
+            "idCustomer": "100",
+            "paymentDate": "6/1/19",
+            "price": 40
+        },
+        {
+            "idCustomer": "100",
+            "paymentDate": "6/2/19",
+            "price": 40
+        },
+        {
+            "idCustomer": "100",
+            "paymentDate": "6/3/19",
+            "price": 40
+        },
+        {
+            "idCustomer": "100",
+            "paymentDate": "6/4/19",
+            "price": 40
+        }
+    ],
+    "subscriptionsDetails": [
+        {
+            "subscriptionDuration": 1,
+            "weeklyWorkouts": 2,
+            "price": 30
+        },
+        {
+            "subscriptionDuration": 1,
+            "weeklyWorkouts": 3,
+            "price": 40
+        },
+        {
+            "subscriptionDuration": 3,
+            "weeklyWorkouts": 3,
+            "price": 100
+        },
+        {
+            "subscriptionDuration": 3,
+            "weeklyWorkouts": 2,
+            "price": 50
+        },
+        {
+            "subscriptionDuration": 1,
+            "weeklyWorkouts": 7,
+            "price": 60
+        },
+        {
+            "subscriptionDuration": 3,
+            "weeklyWorkouts": 7,
+            "price": 150
+        }
+    ]
+}

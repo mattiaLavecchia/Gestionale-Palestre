@@ -1,0 +1,49 @@
+<div class="container">
+    <h1 class="primary-title">LISTA PAGAMENTI</h1>
+    <div class="home-css mb-40">
+        <!-- <mat-form-field appearance="outline">
+            <input matInput type="text" placeholder="Filter">
+        </mat-form-field> -->
+    </div>
+    <div class="example-container mat-elevation-z8" *ngIf="!isLoading">
+        <table mat-table [dataSource]="dataSource" class="custom-table mat-elevation-z8">
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let element">
+                    {{element.customer.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="surname">
+                <th mat-header-cell *matHeaderCellDef> Cognome </th>
+                <td mat-cell *matCellDef="let element">
+                    {{element.customer.surname}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="paymentDate">
+                <th mat-header-cell *matHeaderCellDef> Data Pagamento </th>
+                <td mat-cell *matCellDef="let element">
+                    {{element.paymentDate | date:"MM/dd/yy"}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Importo </th>
+                <td mat-cell *matCellDef="let element">
+                    {{element.price | currency:'EUR' }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="disclaimer">
+                <td mat-footer-cell *matFooterCellDef colspan="4">
+                    TOTAL EARNED : {{totalEarned | currency: 'EUR'}}
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr mat-footer-row *matFooterRowDef="['disclaimer']; sticky: true" class="example-second-footer-row"></tr>
+
+        </table>
+    </div>
+    <mat-spinner *ngIf="isLoading" style="margin: 60px auto;"></mat-spinner>
+
+</div>

@@ -1,0 +1,24 @@
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+mat-form-field {
+    width: 250px;
+}
+
+.input-element {
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

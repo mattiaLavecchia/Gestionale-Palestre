@@ -1,0 +1,44 @@
+mat-form-field {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    gap: 10px;
+}
+
+.card {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    gap: 10px;
+}
+
+.button {
+    width: 100%;
+}
+
+mat-spinner {
+    max-width: 350px;
+    margin: auto;
+}
+
+.logo-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}

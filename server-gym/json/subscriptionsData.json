@@ -1,0 +1,32 @@
+[
+    {
+        "subscriptionDuration": 1,
+        "weeklyWorkouts": 2,
+        "price": 30
+    },
+    {
+        "subscriptionDuration": 1,
+        "weeklyWorkouts": 3,
+        "price": 40
+    },
+    {
+        "subscriptionDuration": 3,
+        "weeklyWorkouts": 3,
+        "price": 100
+    },
+    {
+        "subscriptionDuration": 3,
+        "weeklyWorkouts": 2,
+        "price": 50
+    },
+    {
+        "subscriptionDuration": 1,
+        "weeklyWorkouts": 7,
+        "price": 60
+    },
+    {
+        "subscriptionDuration": 3,
+        "weeklyWorkouts": 7,
+        "price": 150
+    }
+]
