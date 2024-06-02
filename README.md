@@ -56,6 +56,11 @@ Per avviare l'applicazione ora ci basterà eseguire due diversi comandi nelle du
 + Nella Gym_customer_client utilizziamo `npm run start:mock`
 + Nella server-gym utilizziamo `npm run start`
 
+## Documentazione extra
+
+Tramite il link qui sotto è possibile vedere tutti gli endpoint per le diverse operazioni 
+https://documenter.getpostman.com/view/22669479/2sA3QwcA8c
+
 ## Licenza
 
 Questo progetto è concesso in licenza sotto la Licenza MIT. Consulta il file LICENSE per ulteriori informazioni.
