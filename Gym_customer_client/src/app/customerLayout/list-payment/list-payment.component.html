@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="primary-title">LISTA PAGAMENTI</h1>
+    <h1 class="primary-title">PAGAMENTI</h1>
     <div class="home-css mb-40">
         <!-- <mat-form-field appearance="outline">
             <input matInput type="text" placeholder="Filter">
@@ -23,7 +23,7 @@
             <ng-container matColumnDef="paymentDate">
                 <th mat-header-cell *matHeaderCellDef> Data Pagamento </th>
                 <td mat-cell *matCellDef="let element">
-                    {{element.paymentDate | date:"MM/dd/yy"}} </td>
+                    {{element.paymentDate | date: 'dd/MM/yyyy'}} </td>
             </ng-container>
 
             <ng-container matColumnDef="price">

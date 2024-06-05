@@ -4,6 +4,18 @@ mat-drawer-container {
 
 mat-drawer {
     width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-nav-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -56,7 +68,7 @@ a:active {
 .menu-item {
     display: flex;
     align-items: center;
-    padding: 36px;
+    padding: 48px;
     color: #fff;
     /* Cambia colore del testo a tuo piacimento */
     text-decoration: none;

@@ -44,15 +44,16 @@ exports.createAccess = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteAccess = catchAsync(async (req, res, next) => {
-    const customer = await Customer.findById(req.params.id);
+    const access = await Access.findById(req.params.id);
+    const customer = await Customer.findById(access.customer._id);
     if (!customer) {
         return next(new AppError('No customer found with that access', 404));
     };
     customer.accesses++;
-    await Customer.findByIdAndUpdate(req.body.idCustomer, customer);
-    const access = await Access.findByIdAndDelete(req.params.id);
-    if (!access) {
+    await Customer.findByIdAndUpdate(customer._id, customer);
+    const accessDeleted = await Access.findByIdAndDelete(access._id);
+    if (!accessDeleted) {
         return next(new AppError('No access found with that ID', 404));
     };
-    res.status(204).json({ message: 'Cancellato con successo' });
+    res.status(204).json({ message: 'Accesso cancellato con successo' });
 });

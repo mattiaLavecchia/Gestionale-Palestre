@@ -31,17 +31,23 @@ body {
 }
 
 .custom-table {
-    display: table;
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+    /* Assicura che le larghezze delle colonne siano rispettate */
 }
 
 .custom-table th,
 .custom-table td {
-    width: 1%;
     text-align: center;
     padding: 8px;
     border: 1px solid #ddd;
+}
+
+.custom-table th.actions-column,
+.custom-table td.actions-column {
+    width: 70px;
+    text-align: center;
 }
 
 .mb-40 {

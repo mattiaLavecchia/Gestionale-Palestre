@@ -7,3 +7,13 @@
     background-color: orange;
     color: black;
 }
+
+.green-button {
+    color: green;
+}
+
+.disabled-button {
+    color: gray;
+    /* Cambia il colore del pulsante disabilitato */
+    cursor: not-allowed;
+}

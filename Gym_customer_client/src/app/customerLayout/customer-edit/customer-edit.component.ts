@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { tap } from 'rxjs';
+import { CustomSnackBarComponent } from 'src/app/shared/custom-snack-bar/custom-snack-bar.component';
 import { CustomerDetails } from 'src/app/shared/model/customerDetails.model';
 import { SubscriptionDetails } from 'src/app/shared/model/subscriptionDetails.model';
 import { CustomersService } from 'src/app/shared/services/customers.service';
@@ -26,7 +28,8 @@ export class CustomerEditComponent implements OnInit {
     private customersService: CustomersService,
     private activateRoute: ActivatedRoute,
     private router: Router,
-    private subscriptionService: SubscriptionService
+    private subscriptionService: SubscriptionService,
+    private _snackBar: MatSnackBar,
   ) {
     this.getSubscriptionTypes();
   }
@@ -88,8 +91,29 @@ export class CustomerEditComponent implements OnInit {
   public onSaveCustomer(): void {
     if (this.myForm.invalid) return;
     this.isLoading = true;
-    this.customersService.addCustomer(this.myForm.value).subscribe(() => this.router.navigate(['/']));
-    this.isLoading = false;
+    const customerData = this.myForm.value;
+
+    if (this.isEditMode) {
+      customerData._id = this.idCustomer; // Aggiungi l'ID del cliente al dato per l'aggiornamento
+      console.log(customerData);
+      this.customersService.patchCustomer(customerData).subscribe(() => {
+        this.router.navigate(['/']);
+        this._snackBar.openFromComponent(CustomSnackBarComponent, {
+          duration: 3000,
+          data: 'Cliente aggiornato con successo',
+        });
+        this.isLoading = false;
+      });
+    } else {
+      this.customersService.addCustomer(customerData).subscribe(() => {
+        this.router.navigate(['/']);
+        this._snackBar.openFromComponent(CustomSnackBarComponent, {
+          duration: 3000,
+          data: 'Cliente aggiunto con successo',
+        });
+        this.isLoading = false;
+      });
+    }
   }
 
 }

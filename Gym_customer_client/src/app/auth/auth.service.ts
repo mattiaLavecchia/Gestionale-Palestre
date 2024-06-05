@@ -1,8 +1,10 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { MatSnackBar } from "@angular/material/snack-bar";
 import { Router } from "@angular/router";
 import { Observable, Subject, catchError, throwError } from "rxjs";
 import { environment } from "src/environments/environment";
+import { CustomSnackBarComponent } from "../shared/custom-snack-bar/custom-snack-bar.component";
 
 
 @Injectable({
@@ -14,7 +16,11 @@ export class AuthService {
     private serverUrl = environment.apiUrl;
     private authStatusListener = new Subject<boolean>();
 
-    constructor(private http: HttpClient, private router: Router) { };
+    constructor(
+        private http: HttpClient,
+        private router: Router,
+        private _snackBar: MatSnackBar
+    ) { };
 
     public getToken(): string {
         return this.token;
@@ -41,6 +47,10 @@ export class AuthService {
                 this.router.navigate([""]);
             };
         }, error => {
+            this._snackBar.openFromComponent(CustomSnackBarComponent, {
+                duration: 3000,
+                data: 'Email o password sbagliata',
+            });
             this.authStatusListener.next(false);
         });
     };
@@ -70,6 +80,10 @@ export class AuthService {
                 };
             }, error => {
                 console.error(error.error.message);
+                this._snackBar.openFromComponent(CustomSnackBarComponent, {
+                    duration: 3000,
+                    data: error.error.message,
+                });
                 this.authStatusListener.next(false);
             });
     };

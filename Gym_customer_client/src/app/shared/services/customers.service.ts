@@ -34,13 +34,9 @@ export class CustomersService {
   };
 
   patchCustomer(customer: CustomerDetails) {
-    const url = `${this.serverUrl}/customer`;
+    const id = customer._id;
+    const url = `${this.serverUrl}/customers/${id}`;
     return this.http.patch(url, customer);
-  };
-
-  deleteCustomer() {
-    const url = `${this.serverUrl}/customer`;
-    return this.http.delete(url);
   };
 
   getSubscription(): Observable<SubscriptionDetails[]> {

@@ -32,7 +32,8 @@ exports.addPayment = catchAsync(async (req, res, next) => {
     const date = new Date();
     date.setDate(date.getDate() + (30 * customer.subscriptionDuration))
     customer.subscriptionExpires = date;
-    customer.statusSubscription = 'in corso'
+    customer.statusSubscription = 'in corso';
+    customer.accesses = (customer.subscriptionDuration * 4) * customer.weeklyWorkouts;
     await Customer.findByIdAndUpdate(req.body.customer, customer);
     req.body.paymentDate = new Date();
     req.body.price = subscription.price;

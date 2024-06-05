@@ -1,33 +1,29 @@
 <mat-drawer-container *ngIf="isAuthenticated">
   <mat-drawer mode="over" #drawer>
 
-    <mat-nav-list role="listitem">
-      <!-- <a mat-list-item routerLink="/signUp" >
-        <mat-icon >face</mat-icon>
-        <span class="nav-caption">Signup</span>
-      </a> -->
+    <mat-nav-list role="listitem" class="mat-nav-list">
       <!-- <a mat-list-item routerLink="/amministrazione">
         <mat-icon>face</mat-icon>
         <span class="nav-caption">Amministrazione</span>
       </a> -->
 
       <a mat-list-item class="menu-item" routerLink="/">
-        <mat-icon>fitness_center</mat-icon>
-        <span class="nav-caption">Gestione Iscritti</span>
+        <mat-icon>groups</mat-icon>
+        <span class="nav-caption">Clienti</span>
       </a>
 
       <a mat-list-item class="menu-item" routerLink="/list-access">
-        <mat-icon>eject</mat-icon>
-        <span class="nav-caption">Accessi Giornalieri</span>
+        <mat-icon>view_list</mat-icon>
+        <span class="nav-caption">Accessi</span>
       </a>
 
       <a mat-list-item class="menu-item" routerLink="/list-payment">
-        <mat-icon>eject</mat-icon>
-        <span class="nav-caption">Lista pagamenti</span>
+        <mat-icon>payments</mat-icon>
+        <span class="nav-caption">Pagamenti</span>
       </a>
 
       <a mat-list-item class="menu-item" (click)="onLogout()">
-        <mat-icon>logout</mat-icon>
+        <mat-icon>exit_to_app</mat-icon>
         <span class="nav-caption">Logout</span>
       </a>
 

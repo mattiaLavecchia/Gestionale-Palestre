@@ -11,7 +11,7 @@ import { AccessService } from 'src/app/shared/services/access.service';
 })
 export class ListAccessComponent {
   public isLoading: boolean = false;
-  public displayedColumns: string[] = ['name', 'surname', 'access', 'subscriptionExpires'];
+  public displayedColumns: string[] = ['name', 'surname', 'access', 'subscriptionExpires', 'actions'];
   public dataSource: MatTableDataSource<AccessDetails> = new MatTableDataSource<AccessDetails>();
   public totalAccess: number = 0;
   public accessPerPage: number = 5;
@@ -44,5 +44,19 @@ export class ListAccessComponent {
       this.totalAccess = data.countAccess;
       this.isLoading = false;
     });
+  }
+
+  deleteAccess(accessId: string) {
+    this.accessService.deleteAccess(accessId).subscribe(() => {
+      location.reload();
+    })
+  }
+
+  isPastSevenDays(subscriptionExpires: Date): boolean {
+    const now = new Date();
+    const expirationDate = new Date(subscriptionExpires);
+    const diffTime = Math.abs(now.getTime() - expirationDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays > 7;
   }
 }

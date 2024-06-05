@@ -54,6 +54,7 @@ import { MatBadgeModule } from '@angular/material/badge';
         MatMenuModule,
         MatTooltipModule,
         MatBadgeModule
+
     ],
     exports: [
         MatButtonModule,

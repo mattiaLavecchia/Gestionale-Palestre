@@ -10,7 +10,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   </mat-dialog-content>
   <mat-dialog-actions align="end">
     <button mat-button (click)="onCancelClick()">Annulla</button>
-    <button mat-button color="primary" (click)="onConfirmClick()">Conferma</button>
+    <button mat-flat-button color="primary" (click)="onConfirmClick()">Conferma</button>
   </mat-dialog-actions>
   `,
 })

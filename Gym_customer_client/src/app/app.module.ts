@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { DialogComponent } from './shared/dialog/dialog.component';
+import { CustomSnackBarComponent } from './shared/custom-snack-bar/custom-snack-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DialogComponent } from './shared/dialog/dialog.component';
     ListAccessComponent,
     CustomerEditComponent,
     LoginComponent,
-    DialogComponent
+    DialogComponent,
+    CustomSnackBarComponent
   ],
   imports: [
     BrowserModule,
